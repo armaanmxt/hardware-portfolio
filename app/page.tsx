@@ -27,9 +27,9 @@ export default function Home() {
         </section>
         <section id="projects">
           <h2>Selected projects</h2>
-          {projects.map(project=><a className="project" key={project.title} href={project.href} target="_blank" rel="noopener noreferrer">
-            <div className="project-content"><div className="project-heading"><h3>{project.title}</h3>{project.status && <span className="project-status">{project.status}</span>}</div><p>{project.summary}</p><span className="project-meta">{project.meta}</span></div><span className="project-arrow" aria-hidden="true">↗</span>
-          </a>)}
+          {projects.map(project=>{ const Project = project.href ? 'a' : 'article'; return <Project className="project" key={project.title} {...(project.href ? {href: project.href, target: '_blank', rel: 'noopener noreferrer'} : {})}>
+            <div className="project-content"><div className="project-heading"><h3>{project.title}</h3>{project.status && <span className="project-status">{project.status}</span>}</div><p>{project.summary}</p><span className="project-meta">{project.meta}</span></div>{project.href && <span className="project-arrow" aria-hidden="true">↗</span>}
+          </Project>;})}
         </section>
         <footer><a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">{profile.email}</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <Arrow/></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href={profile.resume} target="_blank" rel="noopener noreferrer">Resume <Arrow/></a></footer>
       </main>

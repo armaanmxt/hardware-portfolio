@@ -33,6 +33,12 @@ export const projects = [
     href: 'https://github.com/armaanmxt/parameterized-synchronous-fifo',
   },
   {
+    title: 'SPI-controlled PWM peripheral', status: '',
+    summary: 'An SPI Mode 0 peripheral with memory-mapped control of 16 digital outputs and 16 PWM channels.',
+    meta: 'SystemVerilog · cocotb · SPI / PWM',
+    href: '',
+  },
+  {
     title: 'Python RTL regression tool', status: '',
     summary: 'JSON-configured RTL simulations with automated compilation and consolidated pass/fail reports.',
     meta: 'Python · Icarus Verilog',
