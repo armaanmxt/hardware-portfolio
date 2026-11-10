@@ -2,7 +2,7 @@
 
 [hardware-portfolio-eta.vercel.app](https://hardware-portfolio-eta.vercel.app/)
 
-My corner of the internet. A few hardware projects, some experience, and what I’m working on.
+A few hardware projects, some experience, and what I’m working on.
 
 ## Make it yours
 
