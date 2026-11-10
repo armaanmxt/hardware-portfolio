@@ -12,7 +12,7 @@ export const experience = [
     summary: '10 Gb/s Ethernet PCS · 64b/66b encoding · RTL verification',
   },
   {
-    id: 'opg', logo: '/logos/opg.svg', company: 'Ontario Power Generation',
+    id: 'opg', logo: '/logos/opg-green.png', company: 'Ontario Power Generation',
     href: 'https://www.opg.com/',
     period: 'May 2026 – Aug 2026', role: 'Design Engineering Intern',
     summary: 'Pickering refurbishment · Design reviews · Engineering change control',
@@ -38,3 +38,4 @@ export const projects = [
     href: 'https://github.com/armaanmxt/python-rtl-regression-tool',
   },
 ];
+

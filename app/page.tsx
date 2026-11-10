@@ -16,7 +16,7 @@ export default function Home() {
         <section id="about" className="intro">
           <p>I’m Armaan, a Nanotechnology Engineering student at the <BrandLink href="https://uwaterloo.ca/" logo="/logos/waterloo.png">University of Waterloo</BrandLink>.</p>
           <p>I’m interested in digital hardware, computer architecture, and verification.</p>
-          <p>I’ve worked on electrical design at <BrandLink href="https://www.opg.com/" logo="/logos/opg.svg" wide>OPG</BrandLink> and RTL design and verification with <BrandLink href="https://www.linkedin.com/company/uwasic/" logo="/logos/uwasic.png">UWASIC</BrandLink>.</p>
+          <p>I’ve worked on electrical design at <a className="opg-inline-link" href="https://www.opg.com/" aria-label="Ontario Power Generation"><img src="/logos/opg-green.png" alt="OPG" /></a> and RTL design and verification with <BrandLink href="https://www.linkedin.com/company/uwasic/" logo="/logos/uwasic.png">UWASIC</BrandLink>.</p>
         </section>
         <section id="experience">
           <h2>Experience</h2>
@@ -27,7 +27,7 @@ export default function Home() {
         </section>
         <section id="projects">
           <h2>Selected projects</h2>
-          {projects.map(project=><a className="project" key={project.title} href={project.href}>
+          {projects.map(project=><a className="project" key={project.title} href={project.href} target="_blank" rel="noopener noreferrer">
             <div><h3>{project.title}</h3><p>{project.summary}</p><span className="project-meta">{project.meta}</span></div><span className="project-arrow" aria-hidden="true">↗</span>
           </a>)}
         </section>
@@ -36,3 +36,4 @@ export default function Home() {
     </div>
   </>;
 }
+

@@ -23,6 +23,7 @@ The resume is the exact user-supplied `Armaan_Mathur___Resume (93).pdf`. OPG and
 Logo sources:
 - UWASIC: company profile image from https://www.linkedin.com/company/uwasic/ (retrieved November 9, 2026).
 - Waterloo: https://uwaterloo.ca/university-of-waterloo-logo-152.png
-- OPG: https://commons.wikimedia.org/wiki/File:Ontario_Power_Generation_logo.svg
+- OPG: https://www.opg.com/wp-content/uploads/2019/02/rsz_opg_condensed_logo_green_rbg.png
 
 Logos identify the respective organizations; ownership remains with their owners.
+
