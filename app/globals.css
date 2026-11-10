@@ -20,3 +20,5 @@
 .project:hover .project-arrow{transform:translate(2px,-2px)}
 @media(max-width:650px){.project{padding:21px 0}.project h3{font-size:15px}.project-heading{gap:6px 10px}.project p{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.project,.project-arrow{transition:none}}
+
+footer{flex-wrap:wrap;gap:10px 23px}footer a:first-child{overflow-wrap:anywhere}

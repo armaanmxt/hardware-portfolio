@@ -2,6 +2,7 @@
 export const profile = {
   email: 'a65mathu@uwaterloo.ca',
   github: 'https://github.com/armaanmxt',
+  linkedin: 'https://www.linkedin.com/in/armaan-mathur/',
   resume: '/resume.pdf',
 };
 export const experience = [

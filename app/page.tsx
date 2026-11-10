@@ -31,7 +31,7 @@ export default function Home() {
             <div className="project-content"><div className="project-heading"><h3>{project.title}</h3>{project.status && <span className="project-status">{project.status}</span>}</div><p>{project.summary}</p><span className="project-meta">{project.meta}</span></div><span className="project-arrow" aria-hidden="true">↗</span>
           </a>)}
         </section>
-        <footer><a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">Email <Arrow/></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href={profile.resume} target="_blank" rel="noopener noreferrer">Resume <Arrow/></a></footer>
+        <footer><a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">{profile.email}</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <Arrow/></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href={profile.resume} target="_blank" rel="noopener noreferrer">Resume <Arrow/></a></footer>
       </main>
     </div>
   </>;
