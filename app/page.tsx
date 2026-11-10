@@ -22,7 +22,7 @@ export default function Home() {
           <h2>Experience</h2>
           {experience.map(job=><article className="experience-row" id={job.id} key={job.id}>
             <a className={`org-logo ${job.id}`} href={job.href} target="_blank" rel="noopener noreferrer" aria-label={job.company}><img src={job.logo} alt={job.company} /></a>
-            <div className="experience-copy"><div className="row-top"><h3>{job.role}</h3><span className="date">{job.period}</span></div><a className="company" href={job.href} target="_blank" rel="noopener noreferrer">{job.company} <Arrow/></a><p>{job.summary}</p><details className="experience-details"><summary>More about the work <span aria-hidden="true">+</span></summary><ul>{job.details.map(detail=><li key={detail}>{detail}</li>)}</ul></details></div>
+            <div className="experience-copy"><div className="row-top"><h3>{job.role}</h3><span className="date">{job.period}</span></div><a className="company" href={job.href} target="_blank" rel="noopener noreferrer">{job.company} <Arrow/></a><details className="experience-details"><summary>More about the work <span aria-hidden="true">+</span></summary><ul>{job.details.map(detail=><li key={detail}>{detail}</li>)}</ul></details></div>
           </article>)}
         </section>
         <section id="projects">
