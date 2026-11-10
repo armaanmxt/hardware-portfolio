@@ -1,6 +1,6 @@
 # Armaan Mathur
 
-[hardware-portfolio-eta.vercel.app](https://hardware-portfolio-eta.vercel.app/)
+[armaanmathur.com](https://armaanmathur.com/)
 
 A few hardware projects, some experience, and what I’m working on.
 
