@@ -1,29 +1,21 @@
-# Armaan Mathur — portfolio
+# Armaan Mathur
 
-A minimal portfolio with a short introduction, experience, and three selected projects. Design references: https://www.neiloy.me/ and https://zainkhan.dev/.
+[hardware-portfolio-eta.vercel.app](https://hardware-portfolio-eta.vercel.app/)
 
-## Updates
+My corner of the internet. A few hardware projects, some experience, and what I’m working on.
 
-- Edit `content/portfolio.ts` for experience, projects, and contact links.
-- Replace `public/resume.pdf` to update the resume without changing its URL.
-- Edit the short introduction in `app/page.tsx`.
-- Adjust appearance in `app/globals.css`.
-- Logos live in `public/logos/`.
+## Make it yours
 
-## Local preview and hosting
+- Content → `content/portfolio.ts`
+- Intro → `app/page.tsx`
+- Styling → `app/globals.css`
+- Resume → `public/resume.pdf`
 
-Use Node 24. Run `npm ci`, then `npm run dev`. Run `npm run build:static` to generate the portable website in `out/`.
+## Run locally
 
-The included Vercel configuration builds `out/`. Import this repository into Vercel once to enable automatic publication after GitHub commits. That connection has not been configured by this project. GitHub Actions checks the build on pushes and pull requests. The private Sites preview is published separately from the same source.
+```sh
+npm ci
+npm run dev
+```
 
-## Content and assets
-
-The resume is the exact user-supplied `Armaan_Mathur___Resume (93).pdf`. OPG and UWASIC dates and brief descriptions follow this version. Selected projects are the parameterized synchronous FIFO, L1 cache controller, and Python RTL regression tool. L1 appears as a normal project, without a separate progress section. Website descriptions are concise and do not add deployment or verification claims beyond the available evidence.
-
-Logo sources:
-- UWASIC: company profile image from https://www.linkedin.com/company/uwasic/ (retrieved November 9, 2026).
-- Waterloo: https://uwaterloo.ca/university-of-waterloo-logo-152.png
-- OPG: https://www.opg.com/wp-content/uploads/2019/02/rsz_opg_condensed_logo_green_rbg.png
-
-Logos identify the respective organizations; ownership remains with their owners.
-
+Built with Next.js and TypeScript. Hosted on Vercel. Push to `main` to publish changes.
