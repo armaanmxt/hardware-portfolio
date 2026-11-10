@@ -20,22 +20,21 @@ export const experience = [
 ];
 export const projects = [
   {
-    title: 'Parameterized synchronous FIFO',
-    summary: 'Configurable data width and depth, circular pointers, occupancy tracking, and full/empty flags.',
-    meta: 'SystemVerilog · cocotb',
-    href: 'https://github.com/armaanmxt/parameterized-synchronous-fifo',
-  },
-  {
-    title: 'L1 cache controller',
+    title: 'L1 cache controller', status: 'In progress',
     summary: 'A 1 KB direct-mapped cache design exploring address decoding, tag comparison, and cache refills.',
     meta: 'SystemVerilog · Computer architecture',
     href: 'https://github.com/armaanmxt/L1-Cache-Controller-',
   },
   {
-    title: 'Python RTL regression tool',
+    title: 'Parameterized synchronous FIFO', status: '',
+    summary: 'Configurable data width and depth, circular pointers, occupancy tracking, and full/empty flags.',
+    meta: 'SystemVerilog · cocotb',
+    href: 'https://github.com/armaanmxt/parameterized-synchronous-fifo',
+  },
+  {
+    title: 'Python RTL regression tool', status: '',
     summary: 'JSON-configured RTL simulations with automated compilation and consolidated pass/fail reports.',
     meta: 'Python · Icarus Verilog',
     href: 'https://github.com/armaanmxt/python-rtl-regression-tool',
   },
 ];
-
