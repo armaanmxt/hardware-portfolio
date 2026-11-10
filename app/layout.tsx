@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Armaan Mathur — Digital hardware & verification",
-  description: "Nanotechnology Engineering at Waterloo. Selected digital hardware and verification projects, OPG and UWASIC experience, and an L1 cache controller in progress.",
+  description: "Nanotechnology Engineering at Waterloo. Selected digital hardware and verification projects, OPG and UWASIC experience, and computer architecture projects.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -21,3 +21,4 @@ export default function RootLayout({
     </html>
   );
 }
+
