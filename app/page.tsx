@@ -27,9 +27,20 @@ export default function Home() {
         </section>
         <section id="projects">
           <h2>Selected projects</h2>
-          {projects.map(project=>{ const Project = project.href ? 'a' : 'article'; return <Project className="project" key={project.title} {...(project.href ? {href: project.href, target: '_blank', rel: 'noopener noreferrer'} : {})}>
-            <div className="project-content"><div className="project-heading"><h3>{project.title}</h3>{project.status && <span className="project-status">{project.status}</span>}</div><p>{project.summary}</p><span className="project-meta">{project.meta}</span></div>{project.href && <span className="project-arrow" aria-hidden="true">↗</span>}
+          <div className="project-list">
+          {projects.map((project,index)=>{ const Project = project.href ? 'a' : 'article'; return <Project className={`project ${index === 0 ? 'project-featured' : ''}`} key={project.title} {...(project.href ? {href: project.href, target: '_blank', rel: 'noopener noreferrer'} : {})}>
+            <div className="project-index" aria-hidden="true">{String(index+1).padStart(2,'0')}</div>
+            <div className="project-content">
+              <div className="project-eyebrow">{project.category}{project.status && <span className="project-status"><i aria-hidden="true"/>{project.status}</span>}</div>
+              <div className="project-heading"><h3>{project.title}</h3>{project.href && <span className="project-arrow" aria-hidden="true">↗</span>}</div>
+              <p>{project.summary}</p>
+              {index === 0 && <div className="architecture" aria-label="Conceptual cache read path: CPU, cache, and memory">
+                <span className="architecture-node">CPU</span><span className="architecture-wire" aria-hidden="true"/><span className="architecture-node architecture-cache">L1 CACHE<small>tag / index / offset</small></span><span className="architecture-wire" aria-hidden="true"/><span className="architecture-node">MEMORY</span>
+              </div>}
+              <div className="project-bottom"><div className="project-tags">{project.meta.split(' · ').map(tag=><span key={tag}>{tag}</span>)}</div>{project.href && <span className="source-label">View source <span aria-hidden="true">↗</span></span>}</div>
+            </div>
           </Project>;})}
+          </div>
         </section>
         <footer><a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">{profile.email}</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <Arrow/></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href={profile.resume} target="_blank" rel="noopener noreferrer">Resume <Arrow/></a></footer>
       </main>
