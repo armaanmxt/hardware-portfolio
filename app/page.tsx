@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <section id="about" className="intro">
           <p>I’m Armaan, a Nanotechnology Engineering student at the <BrandLink href="https://uwaterloo.ca/" logo="/logos/waterloo.png">University of Waterloo</BrandLink>.</p>
-          <p>I’m interested in digital hardware, computer architecture, and verification.</p>
+          <p>I’m interested in <mark className="interest-highlight">digital hardware, computer architecture, and verification</mark>.</p>
           <p>I’ve worked on electrical design at <a className="opg-inline-link" href="https://www.opg.com/" target="_blank" rel="noopener noreferrer" aria-label="Ontario Power Generation"><img src="/logos/opg-green.png" alt="OPG" /></a> and RTL design and verification with <BrandLink href="https://www.linkedin.com/company/uwasic/" logo="/logos/uwasic.png">UWASIC</BrandLink>.</p>
         </section>
         <section id="experience">

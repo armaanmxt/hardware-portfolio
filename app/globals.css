@@ -41,3 +41,5 @@
 @media(prefers-reduced-motion:reduce){.project-arrow{transition:none}}
 
 footer{flex-wrap:wrap;gap:10px 23px}footer a:first-child{overflow-wrap:anywhere}
+
+.interest-highlight{background:#e2e8da;color:inherit;padding:3px 2px;border-radius:1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
