@@ -25,7 +25,6 @@
 .project-status{display:inline-flex;align-items:center;gap:5px;font-size:8px;text-transform:none;letter-spacing:.1px;color:#7c7d55;background:transparent;border:0;padding:0;line-height:1.5}
 .project-status i{width:4px;height:4px;background:#8c9064;border-radius:50%}
 .project-arrow{font-size:16px;color:#a49682;line-height:1;transition:transform .15s ease}
-.project:hover h3{text-decoration:none;color:var(--accent)}
 .project:hover .project-arrow{transform:translate(2px,-2px)}
 .project-featured{border:1px solid #ddd5c7!important;background:#f4f0e7;border-radius:6px;padding:24px 23px;margin-bottom:4px;gap:15px}
 .project-featured .project-index{color:#ab977b}
@@ -44,13 +43,16 @@ footer{flex-wrap:wrap;gap:10px 23px}footer a:first-child{overflow-wrap:anywhere}
 
 .interest-highlight{background:#e2e8da;color:inherit;padding:3px 2px;border-radius:1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 
-.project-github{width:17px;height:17px;flex-shrink:0;color:#8a8175}.project:hover .project-github{color:var(--ink)}.project-index{padding-top:0}.project-featured .project-index{padding-top:21px}
+.project-github{width:17px;height:17px;flex-shrink:0;color:#8a8175}.project-heading:hover .project-github{color:var(--ink)}.project-index{padding-top:0}.project-featured .project-index{padding-top:21px}
 
 .experience-details{margin-top:12px;font-size:12px;color:#746e63}
-.experience-details summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;width:fit-content;font-size:10px;color:#8a7c68}
-.experience-details summary::-webkit-details-marker{display:none}
-.experience-details summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
-.experience-details summary span{font-size:14px;line-height:1}
-.experience-details[open] summary span{transform:rotate(45deg)}
+:is(.experience-details,.project-details) summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;width:fit-content;font-size:10px;color:#8a7c68}
+:is(.experience-details,.project-details) summary::-webkit-details-marker{display:none}
+:is(.experience-details,.project-details) summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+:is(.experience-details,.project-details) summary span{font-size:14px;line-height:1}
+:is(.experience-details,.project-details)[open] summary span{transform:rotate(45deg)}
 .experience-details ul{margin:14px 0 0;padding:0 0 0 15px;border-top:1px solid var(--rule)}
 .experience-details li{padding-left:3px;margin:12px 0;line-height:1.85}
+
+.project-details{margin-top:10px}
+.project-details p{margin:10px 0 12px}
