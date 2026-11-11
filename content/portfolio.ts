@@ -35,24 +35,28 @@ export const projects = [
     category: 'Computer architecture', title: 'L1 cache controller', status: 'In progress',
     summary: 'A 1 KB direct-mapped cache design exploring address decoding, tag comparison, and cache refills.',
     meta: 'SystemVerilog · Computer architecture',
+    diagram: { input: 'CPU', core: 'L1 CACHE', detail: 'tag / index / offset', output: 'MEMORY' },
     href: 'https://github.com/armaanmxt/L1-Cache-Controller-',
   },
   {
     category: 'Digital design', title: 'Parameterized synchronous FIFO', status: '',
     summary: 'Configurable data width and depth, circular pointers, occupancy tracking, and full/empty flags.',
     meta: 'SystemVerilog · cocotb',
+    diagram: { input: 'WRITE DATA', core: 'SYNC FIFO', detail: 'circular pointers', output: 'READ DATA' },
     href: 'https://github.com/armaanmxt/parameterized-synchronous-fifo',
   },
   {
     category: 'Hardware interfaces', title: 'SPI-controlled PWM peripheral', status: '',
     summary: 'An SPI Mode 0 peripheral with memory-mapped control of 16 digital outputs and 16 PWM channels.',
     meta: 'SystemVerilog · cocotb · SPI / PWM',
+    diagram: { input: 'SPI HOST', core: 'REGISTERS', detail: 'SPI Mode 0', output: 'PWM / GPIO' },
     href: '',
   },
   {
     category: 'Verification & tooling', title: 'Python RTL regression tool', status: '',
     summary: 'JSON-configured RTL simulations with automated compilation and consolidated pass/fail reports.',
     meta: 'Python · Icarus Verilog',
+    diagram: { input: 'JSON CONFIG', core: 'RTL SIMULATION', detail: 'Icarus Verilog', output: 'TEST REPORT' },
     href: 'https://github.com/armaanmxt/python-rtl-regression-tool',
   },
 ];

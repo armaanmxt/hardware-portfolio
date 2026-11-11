@@ -8,9 +8,8 @@
 .org-logo.opg{padding:3px}
 
 #projects h2{margin-bottom:24px}
-.project-list{display:flex;flex-direction:column}
+.project-list{display:flex;flex-direction:column;gap:12px}
 .project{display:flex;gap:20px;margin:0;padding:27px 0;border-bottom:1px solid var(--rule);align-items:flex-start}
-.project:last-child{border-bottom:0;padding-bottom:5px}
 .project-index{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:22px;line-height:1.3;color:#b0a896;min-width:24px;padding-top:21px}
 .project-content{flex:1;min-width:0}
 .project-eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:8px;text-transform:uppercase;letter-spacing:1.1px;color:#8c8171;margin-bottom:8px;line-height:1.5}
@@ -26,24 +25,24 @@
 .project-status i{width:4px;height:4px;background:#8c9064;border-radius:50%}
 .project-arrow{font-size:16px;color:#a49682;line-height:1;transition:transform .15s ease}
 .project:hover .project-arrow{transform:translate(2px,-2px)}
-.project-featured{border:1px solid #ddd5c7!important;background:#f4f0e7;border-radius:6px;padding:24px 23px;margin-bottom:4px;gap:15px}
-.project-featured .project-index{color:#ab977b}
-.project-featured h3{font-family:'Instrument Serif',Georgia,serif;font-size:31px;font-weight:400;letter-spacing:-.5px}
-.project-featured .project-tags>span{border-color:#ddd5c7}
+.project-card{border:1px solid #ddd5c7;background:#f4f0e7;border-radius:6px;padding:24px 23px;gap:15px}
+.project-card .project-index{color:#ab977b}
+.project-card h3{font-family:'Instrument Serif',Georgia,serif;font-size:31px;font-weight:400;letter-spacing:-.5px}
+.project-card .project-tags>span{border-color:#ddd5c7}
 .architecture{display:flex;align-items:center;margin:23px 0 24px;max-width:420px}
 .architecture-node{font-family:monospace;font-size:9px;letter-spacing:.5px;padding:8px 10px;border:1px solid #d9d0c0;border-radius:3px;background:#faf8f2;text-align:center;line-height:1.6;flex-shrink:0;color:#8b7b64}
-.architecture-cache{padding:9px 14px;border-color:#bdab8e;background:#eae2d4;color:#76644b}
+.architecture-core{padding:9px 14px;border-color:#bdab8e;background:#eae2d4;color:#76644b}
 .architecture-node small{display:block;font-size:7px;letter-spacing:0;color:#9a8a72}
 .architecture-wire{height:1px;background:#cfc2ac;flex:1;min-width:12px;position:relative}
 .architecture-wire:after{content:'';width:3px;height:3px;position:absolute;right:0;top:-1px;background:#b4a184;border-radius:50%}
-@media(max-width:650px){.project{gap:12px;padding:24px 0}.project-index{font-size:19px;min-width:20px}.project h3{font-size:16px}.project-featured{padding:20px 15px;gap:10px}.project-featured h3{font-size:29px}.project-featured .project-index{display:none}.project-eyebrow{font-size:7px}.architecture-node{font-size:8px;padding:7px}.architecture-cache{padding:9px}.architecture-node small{font-size:6px}.source-label{font-size:8px}}
+@media(max-width:650px){.project{gap:12px;padding:24px 0}.project-index{font-size:19px;min-width:20px}.project h3{font-size:16px}.project-card{padding:20px 15px;gap:10px}.project-card h3{font-size:29px}.project-card .project-index{display:none}.project-eyebrow{font-size:7px}.architecture-node{font-size:8px;padding:7px}.architecture-core{padding:9px}.architecture-node small{font-size:6px}.source-label{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.project-arrow{transition:none}}
 
 footer{flex-wrap:wrap;gap:10px 23px}footer a:first-child{overflow-wrap:anywhere}
 
 .interest-highlight{background:#e2e8da;color:inherit;padding:3px 2px;border-radius:1px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 
-.project-github{width:17px;height:17px;flex-shrink:0;color:#8a8175}.project-heading:hover .project-github{color:var(--ink)}.project-index{padding-top:0}.project-featured .project-index{padding-top:21px}
+.project-github{width:17px;height:17px;flex-shrink:0;color:#8a8175}.project-heading:hover .project-github{color:var(--ink)}.project-index{padding-top:0}.project-card .project-index{padding-top:3px}.project-card:has(.project-status) .project-index{padding-top:21px}
 
 .experience-details{margin-top:12px;font-size:12px;color:#746e63}
 :is(.experience-details,.project-details) summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;width:fit-content;font-size:10px;color:#8a7c68}

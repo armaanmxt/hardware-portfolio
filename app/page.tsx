@@ -28,7 +28,7 @@ export default function Home() {
           <h2>Selected projects</h2>
           <div className="project-list">
             {projects.map((project, index) => (
-              <article className={`project ${index === 0 ? 'project-featured' : ''}`} key={project.title}>
+              <article className="project project-card" key={project.title}>
                 <div className="project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
                 <div className="project-content">
                   {project.status && <div className="project-eyebrow"><span className="project-status"><i aria-hidden="true"/>{project.status}</span></div>}
@@ -43,9 +43,15 @@ export default function Home() {
                   <details className="project-details">
                     <summary>Learn more <span aria-hidden="true">+</span></summary>
                     <p>{project.summary}</p>
-                    {index === 0 && <div className="architecture" aria-label="Conceptual cache read path: CPU, cache, and memory">
-                            <span className="architecture-node">CPU</span><span className="architecture-wire" aria-hidden="true"/><span className="architecture-node architecture-cache">L1 CACHE<small>tag / index / offset</small></span><span className="architecture-wire" aria-hidden="true"/><span className="architecture-node">MEMORY</span>
-                    </div>}
+                    <div className="architecture" role="img" aria-label={`${project.diagram.input}, ${project.diagram.core} (${project.diagram.detail}), ${project.diagram.output}`}>
+                      <span className="architecture-node">{project.diagram.input}</span>
+                      <span className="architecture-wire" aria-hidden="true"/>
+                      <span className="architecture-node architecture-core">
+                        {project.diagram.core}<small>{project.diagram.detail}</small>
+                      </span>
+                      <span className="architecture-wire" aria-hidden="true"/>
+                      <span className="architecture-node">{project.diagram.output}</span>
+                    </div>
                     <div className="project-tags">
                       {project.meta.split(' · ').map(tag => <span key={tag}>{tag}</span>)}
                     </div>
