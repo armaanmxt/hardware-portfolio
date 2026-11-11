@@ -1,4 +1,5 @@
 import { profile, experience, projects } from '../content/portfolio';
+import { ProjectVisual } from './project-visual';
 const Arrow = () => <span aria-hidden="true">↗</span>;
 function BrandLink({ href, logo, children, wide = false }: { href: string; logo: string; children: React.ReactNode; wide?: boolean }) {
   return <a className="brand-link" href={href} target="_blank" rel="noopener noreferrer"><span>{children}</span><img className={wide ? 'inline-logo wide' : 'inline-logo'} src={logo} alt="" /></a>;
@@ -43,15 +44,7 @@ export default function Home() {
                   <details className="project-details">
                     <summary>Learn more <span aria-hidden="true">+</span></summary>
                     <p>{project.summary}</p>
-                    <div className="architecture" role="img" aria-label={`${project.diagram.input}, ${project.diagram.core} (${project.diagram.detail}), ${project.diagram.output}`}>
-                      <span className="architecture-node">{project.diagram.input}</span>
-                      <span className="architecture-wire" aria-hidden="true"/>
-                      <span className="architecture-node architecture-core">
-                        {project.diagram.core}<small>{project.diagram.detail}</small>
-                      </span>
-                      <span className="architecture-wire" aria-hidden="true"/>
-                      <span className="architecture-node">{project.diagram.output}</span>
-                    </div>
+                    <ProjectVisual kind={project.visual}/>
                     <div className="project-tags">
                       {project.meta.split(' · ').map(tag => <span key={tag}>{tag}</span>)}
                     </div>
