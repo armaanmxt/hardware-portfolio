@@ -1,5 +1,6 @@
 import { profile, experience, projects } from '../content/portfolio';
 import { ProjectVisual } from './project-visual';
+import { ThemeToggle } from './theme-toggle';
 const Arrow = () => <span aria-hidden="true">↗</span>;
 function BrandLink({ href, logo, children, wide = false }: { href: string; logo: string; children: React.ReactNode; wide?: boolean }) {
   return <a className="brand-link" href={href} target="_blank" rel="noopener noreferrer"><span>{children}</span><img className={wide ? 'inline-logo wide' : 'inline-logo'} src={logo} alt="" /></a>;
@@ -12,6 +13,7 @@ export default function Home() {
         <h1><a href="#about">Armaan Mathur</a></h1>
         <nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a></nav>
         <div className="socials"><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <Arrow/></a><a href={`mailto:${profile.email}`} target="_blank" rel="noopener noreferrer">Email <Arrow/></a><a href={profile.resume} target="_blank" rel="noopener noreferrer">Resume <Arrow/></a></div>
+        <ThemeToggle/>
       </aside>
       <main>
         <section id="about" className="intro">
